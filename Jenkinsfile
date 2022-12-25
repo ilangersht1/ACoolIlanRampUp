@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'hashicorp/terraform:latest'
+            image 'jenkins/jnlp-agent-terraform'
         }
     }
     stages {

@@ -9,9 +9,15 @@ pipeline {
             steps {
                 sh '''
                     terraform init
-                    terraform plan
+                    terraform validate
                 '''
             }
+        }
+    }
+    post {
+        success {
+            tar file: 'artifacts.tar.gz'
+            archiveArtifacts artifacts: 'artifacts.tar.gz'
         }
     }
 }

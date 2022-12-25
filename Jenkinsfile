@@ -8,7 +8,8 @@ pipeline {
         stage('ilan') {
             steps {
                 sh '''
-                    terraform validate
+                    terraform init
+                    terraform plan
                 '''
             }
         }

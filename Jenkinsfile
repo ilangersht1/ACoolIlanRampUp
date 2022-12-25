@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                     pwd
-                    apt install terraform
+                    sudo apt install terraform
                 '''
             }
         }

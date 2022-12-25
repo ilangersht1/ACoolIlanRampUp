@@ -1,11 +1,11 @@
 pipeline {
-    agent { docker { image 'ubuntu:latest' } }
+    agent { docker { image 'hashicorp/terraform:latest' } }
     stages {
         stage('ilan') {
             steps {
                 sh '''
                     pwd
-                    sudo apt install terraform
+                    terraform validate
                 '''
             }
         }

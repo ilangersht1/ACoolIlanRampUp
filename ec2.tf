@@ -20,6 +20,7 @@ resource "aws_instance" "ilan-instance" {
   tags = {
     Owner  = "iLan"
     Delete = "True"
+    Name   = "iLan-instance"
   }
 
 }

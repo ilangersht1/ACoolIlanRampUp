@@ -5,6 +5,7 @@ pipeline {
             args '-it --entrypoint=/bin/bash'
             label 'support_ubuntu_docker'
         }
+    }
     stages {
         stage('ilan') {
             steps {

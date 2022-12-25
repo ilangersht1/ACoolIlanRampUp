@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('ilan') {
             steps {
-                sh 'pwd'
+                sh '''
+                    pwd
+                    apt install terraform
+                '''
             }
         }
     }

@@ -4,5 +4,3 @@ provider "aws" {
 
 
 
-
-

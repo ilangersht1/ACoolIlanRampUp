@@ -10,8 +10,9 @@ resource "aws_network_interface" "ilan-network-interface" {
 }
 
 resource "aws_instance" "ilan-instance" {
-  ami           = "ami-0a261c0e5f51090b1"
-  instance_type = "t2.micro"
+  ami           = "ami-09c5ba4f838d8684a"
+  instance_type = "t2.medium"
+  key_name = "ilan-keypair"
   network_interface {
     network_interface_id = aws_network_interface.ilan-network-interface[count.index].id
     device_index         = 0

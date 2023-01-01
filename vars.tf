@@ -1,4 +1,4 @@
 variable "deploy_count" {
-  type = number
+  type    = number
   default = 2
 }
